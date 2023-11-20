@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Classes from "../styles/ProgressBar.module.css";
 import Button from "./Button";
 
@@ -16,7 +17,7 @@ export default function Answers() {
                     ></div>
                 </div>
             </div>
-            <a href="result.html">
+            <Link to="/result">
                 <Button className={Classes.next}>
                     <span>Next Question</span>
                     <span className="material-icons-outlined">
@@ -24,7 +25,7 @@ export default function Answers() {
                         arrow_forward{" "}
                     </span>
                 </Button>
-            </a>
+            </Link>
         </div>
     );
 }
