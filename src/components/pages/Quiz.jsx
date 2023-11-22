@@ -37,6 +37,9 @@ export default function Quiz() {
     const { id } = useParams();
     const { questions, loading, error } = useQuestions(id);
     const history = useHistory();
+    const { location } = history;
+    const { state } = location;
+    const { videoTitle } = state;
 
     const [qna, dispatch] = useReducer(reducer, initialState);
 
@@ -113,7 +116,7 @@ export default function Quiz() {
                         prev={prevQuestion}
                         progress={percentage}
                     />
-                    <MiniPlayer title={qna[currentQ].title} id={id} />
+                    <MiniPlayer title={videoTitle} id={id} />
                 </>
             )}
         </>
