@@ -103,6 +103,7 @@ export default function Quiz() {
                     <h1>{qna[currentQ].title}</h1>
                     <h4>Question can have multiple answers</h4>
                     <Answers
+                        input
                         options={qna[currentQ].options}
                         handleChange={handleAnswerChange}
                     />
